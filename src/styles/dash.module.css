@@ -12,10 +12,16 @@
     justify-content: center;
     width: 60%;
     margin: 0 auto;
+    padding: 20px;
   }
+
+  .space{
+    margin-left: 20px;
+  }
+  
   .button{
     display:flex;
-    justify-content: end;
+    justify-content: flex-end;
     width: 80%;
     margin: 0 auto;
   }
@@ -42,5 +48,52 @@
   .td {
     padding: 10px; /* Espaçamento interno das células da tabela */
     text-align: center; /* Centraliza o texto das células */
+  }
+  
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: slideDown 0.3s ease forwards;
+  }
+  
+  .modalContent {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-50%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .modalDiv{
+    padding: 10px;
+  }
+  .modalInput{
+    border-radius: 5px;
+    height: 30px;
+  }
+
+  .modalTextArea{
+    border-radius: 5px;
+    height: 90px;
+    width: 380px;
+  }
+  .fecharButton{
+    display: contents;
   }
   
