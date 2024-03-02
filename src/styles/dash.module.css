@@ -1,0 +1,46 @@
+/* dash.module.css */
+
+.container {
+    width: 60%;
+    margin: 0 auto;
+    border: 1px solid black;
+    height: 80vh;
+  }
+
+  .buttons{
+    display:flex;
+    justify-content: center;
+    width: 60%;
+    margin: 0 auto;
+  }
+  .button{
+    display:flex;
+    justify-content: end;
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .centralizado {
+    margin: 0 auto; /* Define as margens automáticas para centralizar a tabela */
+    border-collapse: collapse; /* Une as bordas das células da tabela */
+    width: 80%; /* Defina a largura da tabela conforme necessário */
+  }
+  
+  /* Adicione uma borda à tabela */
+  .table {
+    border: 2px solid #333; /* Cor e largura da borda da tabela */
+  }
+  
+  /* Estilos para cabeçalho da tabela */
+  .th {
+    color: #333; /* Cor do texto do cabeçalho da tabela */
+    padding: 10px; /* Espaçamento interno do cabeçalho da tabela */
+    text-align: center; /* Centraliza o texto do cabeçalho */
+  }
+  
+  /* Estilos para células da tabela */
+  .td {
+    padding: 10px; /* Espaçamento interno das células da tabela */
+    text-align: center; /* Centraliza o texto das células */
+  }
+  
