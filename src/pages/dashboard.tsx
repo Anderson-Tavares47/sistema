@@ -6,6 +6,7 @@ import styles from "@/styles/dash.module.css";
 export default function Dashboard() {
   const [filtroData, setFiltroData] = useState('');
   const [filtroStatus, setFiltroStatus] = useState('');
+  const [mostrarModal, setMostrarModal] = useState(false); // Estado para controlar a exibição do modal
 
   // Exemplo de dados da tabela
   const dadosTabela = [
@@ -35,21 +36,47 @@ export default function Dashboard() {
   };
 
   const handleOutroBotao = () => {
-    // Lógica para o outro botão
+    // Lógica para mostrar o modal
+    setMostrarModal(true);
+  };
+
+  // Função para fechar o modal
+  const fecharModal = () => {
+    setMostrarModal(false);
+  };
+
+  // Função para enviar os dados do formulário
+  const enviarDados = () => {
+    const titulo = document.getElementById('titulo').value;
+    const descricao = document.getElementById('descricao').value;
+    const valor = document.getElementById('valor').value;
+    const dataExpiracao = document.getElementById('dataExpiracao').value;
+    const metodoPagamento = document.getElementById('metodoPagamento').value;
+
+    // Aqui você pode processar os dados, enviar para o servidor, etc.
+    console.log('Dados enviados:');
+    console.log('Título:', titulo);
+    console.log('Descrição:', descricao);
+    console.log('Valor:', valor);
+    console.log('Data de Expiração:', dataExpiracao);
+    console.log('Método de Pagamento:', metodoPagamento);
+
+    // Feche o modal após enviar os dados
+    fecharModal();
   };
 
   return (
     <div>
       <Sidebar />
-        <Cards />
-        <div className={styles.buttons}>
-          <button onClick={handleFiltrarData}>Filtrar por Data</button>
-          <button onClick={handleFiltrarStatus}>Filtrar por Status</button>
+      <Cards />
+      <div className={styles.buttons}>
+        <button onClick={handleFiltrarData}>Filtrar por Data</button>
+        <button onClick={handleFiltrarStatus} className={styles.space}>Filtrar por Status</button>
         <div className={styles.button}>
-        <button onClick={handleOutroBotao}>Outro Botão</button>
+          <button onClick={handleOutroBotao}>Outro Botão</button>
         </div>
-        </div>
-        <div className={styles.container}>
+      </div>
+      <div className={styles.container}>
         <table className={styles.centralizado}>
           <thead>
             <tr>
@@ -73,6 +100,36 @@ export default function Dashboard() {
           </tbody>
         </table>
       </div>
+      {mostrarModal && (
+        <div className={styles.modal}>
+          <div className={styles.modalContent}>
+            <div>
+            <button className={styles.fecharButton} onClick={fecharModal}>X</button>
+            </div>
+            <h2>Criar Links de Pagamento</h2>
+            <div className={styles.modalDiv}>
+              <input className={styles.modalInput} type="text" id="titulo" placeholder="Título" />
+            </div>
+            <div className={styles.modalDiv}>
+              <textarea className={styles.modalTextArea} id="descricao" placeholder="Descrição" />
+            </div>
+            <div className={styles.modalDiv}>
+              <input className={styles.modalInput} type="text" id="valor" placeholder="Valor"/>
+            </div>
+            <div className={styles.modalDiv}>
+              <input className={styles.modalInput} type="date" id="dataExpiracao" />
+            </div>
+            <div className={styles.modalDiv}>
+              <select className={styles.modalInput} id="metodoPagamento">
+                <option value="pendente" defaultChecked>Metodo de pagamento</option>
+                <option value="pago">Pago</option>
+                <option value="cancelado">Cancelado</option>
+              </select>
+            </div> 
+            <button className={styles.enviarButton} onClick={enviarDados}>Enviar Dados</button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
