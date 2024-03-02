@@ -113,6 +113,8 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    height: 50px;
+    width: 130px;
 }
 
 .icone {
