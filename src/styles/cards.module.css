@@ -1,0 +1,83 @@
+/* styles.module.css */
+
+.card {
+    /* position: absolute; */
+    display: flex;
+    width: 300px; /* Defina a largura desejada do card */
+    height: 160px; /* Defina a altura desejada do card */
+    top: 50%; /* Posiciona o topo do card no centro vertical */
+    left: 50%; /* Posiciona a esquerda do card no centro horizontal */
+    transform: translate(-50%, -50%); /* Move o card para o centro da tela */
+    background-color: #ffffff; /* Cor de fundo do card */
+    border-radius: 10px; /* Borda arredondada */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra do card */
+    overflow: hidden; /* Garante que a elipse não ultrapasse os limites do card */
+    margin-left: 50px;
+    margin-top: 160px;
+  }
+
+  .card2 {
+    /* position: absolute; */
+    display: flex;
+    width: 300px; /* Defina a largura desejada do card */
+    height: 160px; /* Defina a altura desejada do card */
+    top: 50%; /* Posiciona o topo do card no centro vertical */
+    left: 80%; /* Posiciona a esquerda do card no centro horizontal */
+    background-color: #01C061; /* Cor de fundo do card */
+    transform: translate(-50%, -50%); /* Move o card para o centro da tela */
+    border-radius: 10px; /* Borda arredondada */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra do card */
+    overflow: hidden; /* Garante que a elipse não ultrapasse os limites do card */
+    margin-top: 160px;
+  }
+  
+  .elipse {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 19%;
+    left: 76%;
+    background-color: #01C061;
+    border-radius: 50%;
+  }
+  
+  .elipse3 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 19%;
+    left: 76%;
+    background-color: white;
+    border-radius: 50%;
+  }
+  
+  .elipse2 {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 21px;
+    left: 20%;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.elipse4 {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 21px;
+    left: 20%;
+    background-color: #01C061;
+    border-radius: 50%;
+}
+
+.dados{
+    padding-left: 10px;
+    color: #01C061;
+}
+
+.dados2{
+    padding-left: 10px;
+    color: white;
+}
+

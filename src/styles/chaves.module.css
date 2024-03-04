@@ -1,0 +1,17 @@
+/* chaves.module.css */
+
+.container {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    padding: 0 20px; /* Espaçamento dos dois lados */
+}
+
+.border {
+    width: 80%; /* Largura da div com a borda */
+    height: 500px; /* Altura da div com a borda */
+    border: 2px solid #01C061; /* Cor e estilo da borda */
+    border-radius: 10px;
+    margin-top: 50px;
+    margin-left: 15%;
+    
+}
