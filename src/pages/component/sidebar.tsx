@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styles from '@/styles/sidebar.module.css';
+import Link from 'next/link';
 
 export default function Sidebar() {
   const [recolhido, setRecolhido] = useState(false);
@@ -10,10 +11,9 @@ export default function Sidebar() {
 
   return (
     <div className={styles.sidebar}>
-      <a className={styles.link}>Home</a>
-      <a className={styles.link}>Sobre</a>
-      <a className={styles.link}>Serviços</a>
-      <a className={styles.link}>Contato</a>
-    </div>
+            <Link href="/dashboard" className={styles.link}>Dashboard</Link>
+            <Link href="/chaves" className={styles.link}>Chaves GetNet</Link>
+            <Link href="/user" className={styles.link}>Perfil</Link>
+        </div>
   );
 };
