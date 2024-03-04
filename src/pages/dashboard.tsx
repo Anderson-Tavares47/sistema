@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Cards from './component/cards';
 import Sidebar from './component/sidebar';
 import styles from "@/styles/dash.module.css";
+import LinkCard from './component/cards';
 
 export default function Dashboard() {
     const [filtroData, setFiltroData] = useState('');
@@ -74,7 +75,9 @@ export default function Dashboard() {
     return (
         <div>
             <Sidebar />
-            <Cards />
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginLeft: '20%' }}>
+      <LinkCard />
+    </div>
             <div className={styles.buttons}>
                 <button className={styles.btnDefault} onClick={handleFiltrarData}>Filtro Data</button>
                 <button className={styles.space} onClick={handleFiltrarStatus} >Status de pagamento</button>
